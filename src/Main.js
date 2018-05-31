@@ -12,12 +12,15 @@ class Main extends Component {
         return (
             <HashRouter>
                 <div>
-                    <h1>Twój organizer!!!</h1>
+                    <h1><font color="black">Twój organizer!!!</font></h1>
                     <ul className="header">
                         <li><NavLink exact to="/">Home</NavLink></li>
-                        <li><NavLink to="/todoList">Lista rzeczy do zrobienia</NavLink></li>
-                        <li><NavLink to="/shoppingList">Lista zakupów</NavLink></li>
-                        <li><NavLink to="/birthdaysList">Urodzinowa przypominajka</NavLink></li>
+                        <li>Listy
+                        <ul>
+                            <li><NavLink to="/todoList">Lista Todo</NavLink></li>
+                            <li><NavLink to="/shoppingList">Lista zakupów</NavLink></li>
+                            <li><NavLink to="/birthdaysList">Urodzinowa przypominajka</NavLink></li>
+                        </ul></li>
                         <li><NavLink to="/calendar">Kalendarz</NavLink></li>
                     </ul>
                     <div className="content">
