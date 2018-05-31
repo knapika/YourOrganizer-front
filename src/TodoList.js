@@ -4,7 +4,7 @@ const Title = ({todoCount}) => {
     return (
         <div>
             <div>
-                <h1>Lista rzeczy do zrobienia! ({todoCount})</h1>
+                <h2>Lista rzeczy do zrobienia liczy obecnie: ({todoCount}) pozycji!</h2>
             </div>
         </div>
     );
@@ -86,10 +86,10 @@ class TodoComponent extends Component {
 
     render() {
         return (
-            <div>
+            <div className="componentContainer">
                 <Title todoCount={this.state.data.length}/>
                 <TodoForm addTodo={this.addTodo}/>
-                <div><font size="8"> Do zrobienia!</font></div>
+                <h2>Do zrobienia:</h2>
                 <TodoList
                     todos={this.state.data}
                     remove={this.handleRemoveFromTodos.bind(this)}

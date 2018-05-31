@@ -12,7 +12,7 @@ class Main extends Component {
         return (
             <HashRouter>
                 <div>
-                    <h1><font color="black">Twój organizer!!!</font></h1>
+                    <h1 align = "right"><font color="black" size="50px">Twój organizer</font></h1>
                     <ul className="header">
                         <li><NavLink exact to="/">Home</NavLink></li>
                         <li>Listy

@@ -3,7 +3,7 @@
 class Home extends Component {
     render() {
         return (
-            <div>
+            <div className="componentContainer">
                 <h2><font size="30">Witaj!!</font></h2>
                 <p>Czy zdarzało Ci się pójść do sklepu po zakupy i w drodze do domu zorientować się, że zapomniałeś
                     czegoś kupić?
