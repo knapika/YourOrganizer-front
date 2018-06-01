@@ -12,12 +12,13 @@ class Main extends Component {
         return (
             <HashRouter>
                 <div>
+                    <div class="parallax"></div>
                     <h1 align = "right"><font color="black" size="50px">Twój organizer</font></h1>
                     <ul className="header">
                         <li><NavLink exact to="/">Home</NavLink></li>
                         <li>Listy
                         <ul>
-                            <li><NavLink to="/todoList">Lista Todo</NavLink></li>
+                            <li><NavLink to="/todoList">Lista "todo"</NavLink></li>
                             <li><NavLink to="/shoppingList">Lista zakupów</NavLink></li>
                             <li><NavLink to="/birthdaysList">Urodzinowa przypominajka</NavLink></li>
                         </ul></li>
