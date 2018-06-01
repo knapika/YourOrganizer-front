@@ -41,7 +41,6 @@ const ProdForm = ({addProd}) => {
 
             <button type="button" onClick={(e) => {
                 e.preventDefault();
-                console.log(inputProd.value);
                 addProd(inputProd.value, inputAmount.value);
                 inputProd.value = '';
                 inputAmount.value = '';
