@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 
+
+
 const Title = ({todoCount}) => {
     return (
         <div>
@@ -12,8 +14,9 @@ const Title = ({todoCount}) => {
 
 const Todo = ({todo, remove}) => {
     return (
-        <div className="list-group-item" onClick={() =>
-        {remove(todo.id)}}> <u>Zadanie:</u> {todo.text}  <u>Priorytet:</u> {todo.priority}</div>
+        <div className="list-group-item" onClick={() => {
+            remove(todo.id)
+        }}><u>Zadanie:</u> {todo.text} <u>Priorytet:</u> {todo.priority}</div>
     )
 }
 
@@ -22,7 +25,7 @@ const TodoList = ({todos, remove}) => {
         return (<Todo todo={todo} key={todo.id} remove={remove}/>)
     });
 
-    return (<div className="list-group" style={{marginTop:'30px'}}>{todoNode}</div>);
+    return (<div className="list-group" style={{marginTop: '30px'}}>{todoNode}</div>);
 }
 
 const TodoForm = ({addTodo}) => {
@@ -37,7 +40,7 @@ const TodoForm = ({addTodo}) => {
         }}>
             <input className="form-control col-md-12" ref={node => {
                 input = node;
-            }} />
+            }}/>
 
             <div className="form-group">
                 <label>Priorytet: </label>
@@ -50,38 +53,59 @@ const TodoForm = ({addTodo}) => {
                 </select>
             </div>
 
-            <br />
+            <br/>
         </form>
     );
 };
 
 window.id = 0;
+
 class TodoComponent extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            data: [],
-        }
+            data: this.allStorage(),
+        };
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.setState({data: this.state.data});
     }
 
     addTodo = (val, priority) => {
+        localStorage.setItem("todo." + val, priority);
         const todo = {text: val, id: window.id++, priority: priority};
-        this.setState({data: this.state.data.concat([todo]).sort((a, b) => a.priority-b.priority)});
-
+        this.setState({data: this.state.data.concat([todo]).sort((a, b) => a.priority - b.priority)});
     }
 
-    handleRemoveFromTodos(id){
-        const remainder = this.state.data.filter((todo) => {
-            if(todo.id !== id) return todo;
+    handleRemoveFromTodos(id) {
+        const toDelete = this.state.data.filter((todo) => {
+            if (todo.id === id) return todo;
         });
 
+        const remainder = this.state.data.filter((todo) => {
+            if (todo.id !== id) return todo;
+        });
         this.setState({
             data: remainder
         });
+
+        localStorage.removeItem("todo." + toDelete[0].text);
+    }
+
+    allStorage() {
+        var archive = [],
+            keys = Object.keys(localStorage),
+            i = 0, key;
+
+        for (; key = keys[i]; i++) {
+            if(key.startsWith("todo.", 0)) {
+                const todo = {text: key.substring(5), id: window.id++, priority: localStorage.getItem(key)};
+                archive.push(todo);
+            }
+        }
+
+        return archive.sort((a, b) => a.priority - b.priority);
     }
 
     render() {
@@ -98,5 +122,6 @@ class TodoComponent extends Component {
         );
     }
 }
+
 
 export default TodoComponent;
