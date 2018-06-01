@@ -7,6 +7,7 @@ import {
 import Home from "./Home";
 import TodoList from "./TodoList";
 import ShoppingListComponent from "./ShoppingList";
+import BirthdayListComponent from "./BirthdayList";
 
 class Main extends Component {
     render() {
@@ -17,7 +18,7 @@ class Main extends Component {
                     <h1 align = "right"><font color="black" size="50px">Twój organizer</font></h1>
                     <ul className="header">
                         <li><NavLink exact to="/">Home</NavLink></li>
-                        <li>Listy
+                        <li>Organizer
                         <ul>
                             <li><NavLink to="/todoList">Lista "todo"</NavLink></li>
                             <li><NavLink to="/shoppingList">Lista zakupów</NavLink></li>
@@ -29,6 +30,7 @@ class Main extends Component {
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/todoList" component={TodoList}/>
                         <Route exact path="/shoppingList" component={ShoppingListComponent}/>
+                        <Route exact path="/birthdaysList" component={BirthdayListComponent}/>
                     </div>
                 </div>
             </HashRouter>

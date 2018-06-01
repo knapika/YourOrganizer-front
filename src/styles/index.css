@@ -81,6 +81,31 @@ h2 {
 .componentContainer {
     background-color: white;
 }
+
+div.month {
+    padding-top: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+div.month button {
+    position: relative;
+    background-color: lightgrey;
+    left: 30%;
+    border: 1px solid black;
+    color: black;
+    padding-top: 15px;
+    cursor: pointer;
+    width: 40%;
+    display: block;
+    text-align: center;
+}
+
+.month button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
 /*ul.header li {*/
     /*display: inline;*/
     /*list-style-type: none;*/
