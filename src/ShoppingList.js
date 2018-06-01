@@ -67,17 +67,17 @@ class ShoppingListComponent extends Component {
 
     addProduct = (val, amount) => {
         localStorage.setItem("shopping." + val, amount);
-        const todo = {text: val, id: window.id++, amount: amount};
-        this.setState({data: this.state.data.concat([todo])});
+        const prod = {text: val, id: window.id++, amount: amount};
+        this.setState({data: this.state.data.concat([prod])});
     }
 
     handleRemoveProduct(id) {
-        const toDelete = this.state.data.filter((todo) => {
-            if (todo.id === id) return todo;
+        const toDelete = this.state.data.filter((prod) => {
+            if (prod.id === id) return prod;
         });
 
-        const remainder = this.state.data.filter((todo) => {
-            if (todo.id !== id) return todo;
+        const remainder = this.state.data.filter((prod) => {
+            if (prod.id !== id) return prod;
         });
         this.setState({
             data: remainder
@@ -93,8 +93,8 @@ class ShoppingListComponent extends Component {
 
         for (; key = keys[i]; i++) {
             if(key.startsWith("shopping.", 0)) {
-                const todo = {text: key.substring(9), id: window.id++, amount: localStorage.getItem(key)};
-                archive.push(todo);
+                const prod = {text: key.substring(9), id: window.id++, amount: localStorage.getItem(key)};
+                archive.push(prod);
             }
         }
 
