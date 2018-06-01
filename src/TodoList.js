@@ -38,7 +38,7 @@ const TodoForm = ({addTodo}) => {
         }}>
             <input className="form-control col-md-12" ref={node => {
                 input = node;
-            }}/>
+            }}  placeholder={"Wpisz zadanie"}/>
 
             <div className="form-group">
                 <label>Priorytet: </label>
