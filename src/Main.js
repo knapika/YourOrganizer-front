@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Home from "./Home";
 import TodoList from "./TodoList";
+import ShoppingListComponent from "./ShoppingList";
 
 class Main extends Component {
     render() {
@@ -27,6 +28,7 @@ class Main extends Component {
                     <div className="content">
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/todoList" component={TodoList}/>
+                        <Route exact path="/shoppingList" component={ShoppingListComponent}/>
                     </div>
                 </div>
             </HashRouter>
