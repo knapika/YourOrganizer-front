@@ -9,7 +9,7 @@ body {
 .parallax {
     background-image: url("calendar.jpg");
 
-    min-height: 600px;
+    min-height: 500px;
 
     background-attachment: fixed;
     background-position: center;
