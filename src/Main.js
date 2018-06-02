@@ -8,6 +8,7 @@ import Home from "./Home";
 import TodoList from "./TodoList";
 import ShoppingListComponent from "./ShoppingList";
 import BirthdayListComponent from "./BirthdayList";
+import CalendarComponent from "./Calendar";
 
 class Main extends Component {
     render() {
@@ -31,6 +32,7 @@ class Main extends Component {
                         <Route exact path="/todoList" component={TodoList}/>
                         <Route exact path="/shoppingList" component={ShoppingListComponent}/>
                         <Route exact path="/birthdaysList" component={BirthdayListComponent}/>
+                        <Route exact path="/calendar" component={CalendarComponent}/>
                     </div>
                 </div>
             </HashRouter>
