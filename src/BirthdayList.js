@@ -43,7 +43,7 @@ const BirthForm = ({addBirth}) => {
             day.value = 1;
             month.value = 'Styczeń';
         }}>
-            <input className="form-control col-md-12"  name="Nazwa produktu" ref={node => {
+            <input className="form-control col-md-12" ref={node => {
                 inputName = node;
             }} placeholder={"Wpisz dane osoby"}/>
 

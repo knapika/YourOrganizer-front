@@ -31,11 +31,11 @@ const ProdForm = ({addProd}) => {
     let inputAmount;
     return (
         <form>
-            <input className="form-control col-md-12"  name="Nazwa produktu" ref={node => {
+            <input className="form-control col-md-12"  ref={node => {
                 inputProd = node;
             }} placeholder={"Podaj nazwę produktu"}/>
 
-            <input className="form-control col-md-12"  name="Nazwa produktu" ref={node => {
+            <input className="form-control col-md-12"  ref={node => {
                 inputAmount = node;
             }}  placeholder={"Podaj ilość"}/>
 
