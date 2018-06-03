@@ -57,11 +57,13 @@ ul.header li a:hover {
 
 ul.header li ul li {
     display: none;
+    float: left;
+
 }
 
 ul.header li:hover ul li {
     display: block;
-    z-index: 100;
+
 }
 h1, h2, p, ul, li {
     font-family: sans-serif;
@@ -159,7 +161,7 @@ h2 {
     color: black
 }
 
-/* Add media queries for smaller screens */
+
 @media screen and (max-width:720px) {
     .weekdays li, .days li {width: 13.1%;}
 }
@@ -172,36 +174,3 @@ h2 {
 @media screen and (max-width: 290px) {
     .weekdays li, .days li {width: 12.2%;}
 }
-
-/* Add a background color on hover */
-/*ul.header li {*/
-    /*display: inline;*/
-    /*list-style-type: none;*/
-    /*margin: 0;*/
-/*}*/
-/*ul.header {*/
-    /*background-color: black;*/
-    /*padding: 0;*/
-/*}*/
-/*ul.header li a {*/
-    /*color: white;*/
-    /*font-weight: bold;*/
-    /*text-decoration: none;*/
-    /*padding: 20px;*/
-    /*display: inline-block;*/
-/*}*/
-
-
-
-/*.content h2 {*/
-    /*padding: 0;*/
-    /*margin: 0;*/
-/*}*/
-/*.content li {*/
-    /*margin-bottom: 10px;*/
-/*}*/
-
-/*:active {*/
-    /*background-color: grey;*/
-    /*text-decoration: none;*/
-/*}*/

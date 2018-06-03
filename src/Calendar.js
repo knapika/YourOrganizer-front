@@ -106,7 +106,7 @@ class CalendarComponent extends Component {
         var array = this.getInitialEmptyDays(firstDay);
         for (var i = 0; i < amountOfDaysInMonth; i++) {
             const day = {dayIndex: i + 1, id: window.id++, ifCurrentDay: false, ifBirth: this.checkIfBirthday(i + 1, birthsInMonth)};
-            if (i === currentDay && monthIndex === currentMonth) {
+            if (i + 1 === currentDay && monthIndex === currentMonth) {
                 day.ifCurrentDay = true;
             }
             array.push(day)

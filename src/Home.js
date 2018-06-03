@@ -11,9 +11,16 @@ class Home extends Component {
                     spotkanie ?
                     Może co gorsza miałeś jakieś zadanie do wykonania i też wypadło Ci ono z głowy?!
                     Nie martw się to koniec Twoich zmartwień!</p>
-                <p><b>Mamy dla Ciebie rozwiązanie, to nasza aplikacja YourOrganizer!!!</b></p>
-                <p>Z nią nigdy już nie będziesz marnował czasu na powrót do sklepu i uzupełnienie zakupów! Zawsze będziesz
-                pamiętał o spotkaniach oraz urodzinach bliskich i znajomych!!</p>
+                <p><b>Mamy dla Ciebie rozwiązanie, to nasza aplikacja YourOrganizer!!!</b>&nbsp;Z nią nigdy już nie będziesz
+                    marnował czasu na powrót do sklepu i uzupełnienie zakupów! Zawsze będziesz
+                    pamiętał o spotkaniach oraz urodzinach bliskich i znajomych!!</p>
+                <p>Aplikacja pozwala na zapisywanie czynności, które musisz wykonać. Odpowiada za to zakładka Organizer ->
+                Lista "todo". Ponadto możesz tworzyć listę zakupów, abyś już nigdy nie musiał wracać się po zapomniane produkty.
+                Kolejną bardzo ważną funkcjonalnością, jest możliwość zapisywania dni, w których Twoi znajomi i bliscy mają
+                urodziny (Organizer -> Urodzinowa przypominajka). Cała zbiorcza informacja jest przedstawiona na kalendarzu,
+                    dostępnym w zakładce Kalendarz. Dni, w których Twoi bliscy mają urodziny są podświetlane na żółto, natomiast
+                    bierzący dzień na różowo.
+                </p>
             </div>
         );
     }
